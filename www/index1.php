@@ -1,7 +1,15 @@
 <?php
 
-$api_key = '2321d44502d42675f576911da4789449';
+$youtube_key = 'AIzaSyDPcnOmvhwhoatSYbAGDBtnxd_VRPwh6tQ';
 $clarifai_key = 'LTxTWHwkvLRjPxaSW5rDnXialbx7n3wWa2vrCgbq';
+
+
+https://www.googleapis.com/youtube/v3/youtube.search.list?
+        part=snippet
+        &order=viewCount
+        &q=skateboarding+dog
+        &type=video
+        &videoDefinition=high
 
 $perPage = 25;
 $url = 'https://api.flickr.com/services/rest/?method=flickr.interestingness.getList';

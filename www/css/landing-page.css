@@ -22,7 +22,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .lead {
@@ -30,9 +30,52 @@ h6 {
     font-weight: 400;
 }
 
+.btn-success {
+  width:250px;
+  height:70px;
+  margin-top: 50px;
+  font-size: 25px;
+  background-color:#ffb3b3;
+  border-color: #ffb3b3;
+}
+
+.btn-success:hover {
+  background-color:#ff6666 !important;
+  border-color: #ff6666 !important;
+}
+
+.btn-success:active {
+  background-color:#ff2222 !important;
+  border-color: #ff2222 !important;
+}
+
+.btn-success:focus {
+  background-color:#ffb3b3;
+  border-color: #ffb3b3;
+}
+
+.dropzone {
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  color:black;
+}
+
+.tags {
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.btn-share {
+  width: 50px;
+  height: 50px;
+}
+
+
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    height:100%;
     text-align: center;
     color: #f8f8f8;
     background: url(../img/intro-bg.jpg) no-repeat center center;
@@ -41,7 +84,7 @@ h6 {
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
+    padding-top: 10%;
     padding-bottom: 20%;
 }
 
@@ -116,7 +159,6 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 

@@ -128,7 +128,7 @@ function fetchVids($photo_url,$token,$photoTagSampleSize,$videoSamples) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav">PhotoVine</a>
+                <a class="navbar-brand topnav" href="http://159.203.19.72/photovine" >PhotoVine</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!-- /.navbar-collapse -->
@@ -172,7 +172,7 @@ function fetchVids($photo_url,$token,$photoTagSampleSize,$videoSamples) {
                               echo '</video><br>';
                               #echo "Score: $pts";
                               echo "<br>";
-                              echo "<a href=\"".$vid."\"><img src=\"img/vine.png\"></a>";
+                              echo "<a href=\"".$vid."\"><img src=\"img/number-".$count.".png\"></a>";
                             }
                              echo "</div>";
                             // echo "<div ";
@@ -186,19 +186,43 @@ function fetchVids($photo_url,$token,$photoTagSampleSize,$videoSamples) {
                               <button class="btn btn-share btn-raised" style="background-color:#3b5998;font-size:25px;"><i class="fa fa-facebook-official"></i></button>
                               <button class="btn btn-share btn-raised" style="background-color:#4099FF;font-size:25px;"><i class="fa fa-twitter-square"></i></button>
                               <button class="btn btn-share btn-raised" style="background-color:#36465d;font-size:25px;"><i class="fa fa-tumblr-square"></i></button>
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="outerlayer">
+                                  <h2 style="color:black">Your Image</h2>
+                                  <hr class="intro-divider">
+                              <?php
+                                echo "<img src='".$photo_url."' style='display:block; margin:auto; max-width:300px;' width=auto>";
+                                echo "<br>";
+                                echo "</div>";
+                                echo "</div>";
+                                echo "<div class='col-lg-6' style='margin-top:27px;'>";
+                                echo " <h2 style='color:black'>Your Tags</h2>
+                                  <hr class='intro-divider'>";
+                                foreach ($tags as $tag=>$key){
+
+                                  echo "<div class='col-lg-4' style='color:white;background-color:rgba(0, 0, 0, 0.8);border-radius:5px;'>";
+                                  echo $tag;
+
+                                  echo "</div>";
+                                }
+                              ?>
                             </div>
+                          </div>
+                          </div>
+                        </div>
                             <?php
                           } else {
                             ?>
-                            <form action="/help" class="dropzone" id="uploader"></form>
+                            <!-- <form action="/help" class="dropzone" id="uploader"></form> -->
 
                             <div class="form-group text-center">
                             <div>
-                              <input type="text" name="urllink" id="urlLink" placeholder="Paste Your Url Here!" style="color:black;display:none;height:70px;width:80%;border-radius:5px;padding-left:50px;"/>
+                              <input type="text" name="urllink" id="urlLink" placeholder="Paste Your Url Here!" style="color:black;height:70px;width:80%;border-radius:5px;padding-left:50px;"/>
                               <br>
-                              <button class="btn btn-success btn-raised" style="display:none;" id="sendLink" name="submit_photovine">Use This Link!</button>
-                              <button type="button" class="btn btn-success btn-raised" id="upload">Pho<em>to</em><img src="img/vine.png" style="height:25px;padding-bottom:5px;"></img> This!</button>
-                              <button type="button" style="margin-left:20px;" id="link" class="btn btn-success btn-raised">Provide a Link!</button>
+                              <button class="btn btn-success btn-raised"  id="sendLink" name="submit_photovine">Pho<em>to</em><img src="img/vine.png" style="height:25px;padding-bottom:5px;"></img> This!</button>
+                              <button type="button" class="btn btn-success btn-raised" style="display:none;" id="upload">Pho<em>to</em><img src="img/vine.png" style="height:25px;padding-bottom:5px;"></img> This!</button>
+                              <!-- <button type="button" style="margin-left:20px;" id="link" class="btn btn-success btn-raised">Provide a Link!</button> -->
                             </div>
                             </div>
                             <?php

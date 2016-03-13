@@ -183,8 +183,9 @@ function fetchVids($photo_url,$token,$photoTagSampleSize,$videoSamples) {
                             ?>
                             <hr class="intro-divider">
                             <div class="form-group text-center">
+                              <a href="https://twitter.com/share" class="btn btn-share btn-raised" style="background-color:#4099FF;font-size:25px;" data-url="http://159.203.19.72/photovine/?submit_photovine=<?php echo $_GET['submit_photovine'];?>" data-size="large" data-dnt="true"><i class="fa fa-twitter-square"></i></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                               <button class="btn btn-share btn-raised" style="background-color:#3b5998;font-size:25px;"><i class="fa fa-facebook-official"></i></button>
-                              <button class="btn btn-share btn-raised" style="background-color:#4099FF;font-size:25px;"><i class="fa fa-twitter-square"></i></button>
                               <button class="btn btn-share btn-raised" style="background-color:#36465d;font-size:25px;"><i class="fa fa-tumblr-square"></i></button>
                             <div class="row">
                               <div class="col-lg-6">
@@ -323,7 +324,22 @@ function fetchVids($photo_url,$token,$photoTagSampleSize,$videoSamples) {
       });
     });
     </script>
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
 
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
